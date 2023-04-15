@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import Link from "next/link";
 import Comments from "../../components/comments";
 import Status from "../../components/status";
+import Skillbar from "../../components/Skillbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function Home({services}) {
           </div>
         ))}
       </Suspense>
+      <Skillbar/>
       <Status/>
       <Comments/>
       </section>

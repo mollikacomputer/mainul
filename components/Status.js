@@ -1,33 +1,80 @@
-
-
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
+import { FaUsers, FaMoneyCheck, FaComment, FaTools } from "react-icons/fa";
 const Status = () => {
   return (
-    <section class="text-gray-600 body-font ">
-      <div class="container px-5 py-24 mx-auto bg-white">
-        <div class="flex flex-wrap -m-4 text-center ">
-          <div class="p-4 sm:w-1/4 w-1/2 ">
-            <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">
-              2.7K
-            </h2>
-            <p class="leading-relaxed">Users</p>
+    <section className="container mx-auto ">
+      <div className="text-center" >
+      <h2 className="text-3xl my-16 text-bold ">Company Status</h2>
+      </div>
+      <div className="hero bg-white bg-base-100 rounded-2xl">
+        <div className="hero-content flex-col lg:flex-row">
+          {/* ______customers____ */}
+          <div className="stat">
+            <div className="stat-figure text-red-400 s-full">
+              <FaUsers className="w-16 h-16" />
+            </div>
+            <div className="stat-title">Customers</div>
+            <div className="stat-value">100000+</div>
           </div>
-          <div class="p-4 sm:w-1/4 w-1/2">
-            <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">
-              1.8K
-            </h2>
-            <p class="leading-relaxed">Subscribes</p>
+
+          {/* ____annual revenue____ */}
+          <div className="stat">
+            <div className="stat-figure text-red-400 s-full">
+              <FaMoneyCheck className="w-16 h-16" />
+            </div>
+            <div className="stat-title">Annual Revenue</div>
+            <div className="stat-value">
+              <div>
+                <VisibilitySensor>
+                  {({ isVisible }) => (
+                    <div style={{ height: 1 }}>
+                      {isVisible ? (
+                        <CountUp end={1000} duration={3} suffix={"M"} />
+                      ) : null}
+                    </div>
+                  )}
+                </VisibilitySensor>
+              </div>
+            </div>
           </div>
-          <div class="p-4 sm:w-1/4 w-1/2">
-            <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">
-              35
-            </h2>
-            <p class="leading-relaxed">Downloads</p>
+
+          {/* ______rviews______ */}
+          <div className="stat">
+            <div className="stat-figure text-red-400 s-full">
+              <FaComment className="w-16 h-16" />
+            </div>
+            <div className="stat-title">Reviews</div>
+            <div className="stat-value">
+              <VisibilitySensor>
+                {({ isVisible }) => (
+                  <div style={{ height: 1 }}>
+                    {isVisible ? (
+                      <CountUp end={2000} duration={3} suffix={"k+"} />
+                    ) : null}
+                  </div>
+                )}
+              </VisibilitySensor>
+            </div>
           </div>
-          <div class="p-4 sm:w-1/4 w-1/2">
-            <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">
-              4
-            </h2>
-            <p class="leading-relaxed">Products</p>
+
+          {/* _______tools_______ */}
+          <div className="stat">
+            <div className="stat-figure text-red-400 s-full">
+              <FaTools className="w-16 h-16" />
+            </div>
+            <div className="stat-title">Tools</div>
+            <div className="stat-value">
+              <VisibilitySensor>
+                {({ isVisible }) => (
+                  <div style={{ height: 1 }}>
+                    {isVisible ? (
+                      <CountUp end={1000} duration={3} suffix={"+"} />
+                    ) : null}{" "}
+                  </div>
+                )}
+              </VisibilitySensor>
+            </div>
           </div>
         </div>
       </div>
