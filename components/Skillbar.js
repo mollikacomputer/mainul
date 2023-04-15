@@ -17,12 +17,10 @@ const Skillbar = () => {
           background: "#2980b9"
         }
       };
-      const width = {
-        width:'150'
-      }
+      
     return (
         <div className='container my-10 mx-auto rounded-lg w-11/12 bg-gray-600'>
-            <SkillBar skills={skills} width={width} animationDelay={500} colors={colors} />
+            <SkillBar skills={skills} width={width} animationDelay={4000} colors={colors} />
         </div>
     );
 };
