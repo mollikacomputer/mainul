@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import HeroSection from "../../components/HeroSection";
 import { Suspense } from "react";
@@ -13,6 +12,7 @@ export default function Home({services}) {
   return (
     <main>
       <HeroSection />
+      <Skillbar/>
       {/* service section */}
       <section className="">
       <Suspense fallback={<div> Loading...... </div>}>
@@ -30,7 +30,6 @@ export default function Home({services}) {
           </div>
         ))}
       </Suspense>
-      <Skillbar/>
       <Status/>
       <Comments/>
       </section>
