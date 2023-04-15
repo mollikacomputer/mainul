@@ -5,12 +5,16 @@ import Link from "next/link";
 import Comments from "../../components/comments";
 import Status from "../../components/Status";
 import Skillbar from "../../components/Skillbar";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({services}) {
   return (
     <main>
+      <Head> 
+        <title> SEO Expert </title>
+      </Head>
       <HeroSection />
       <Skillbar/>
       {/* service section */}
