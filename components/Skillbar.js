@@ -20,7 +20,7 @@ const Skillbar = () => {
       
     return (
         <div className='container my-10 mx-auto rounded-lg w-11/12 bg-gray-600'>
-            <SkillBar skills={skills} width={width} animationDelay={1000} colors={colors} />
+            <SkillBar skills={skills} width={width} animationDelay={4000} colors={colors} />
         </div>
     );
 };
