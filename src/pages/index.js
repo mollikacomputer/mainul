@@ -3,7 +3,7 @@ import HeroSection from "../../components/HeroSection";
 import { Suspense } from "react";
 import Link from "next/link";
 import Comments from "../../components/comments";
-import Status from "../../components/status";
+import Status from "../../components/Status";
 import Skillbar from "../../components/Skillbar";
 
 const inter = Inter({ subsets: ["latin"] });

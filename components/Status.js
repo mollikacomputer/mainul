@@ -1,6 +1,7 @@
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import { FaUsers, FaMoneyCheck, FaComment, FaTools } from "react-icons/fa";
+
 const Status = () => {
   return (
     <section className="container mx-auto ">
