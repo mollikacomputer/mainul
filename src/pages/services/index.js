@@ -1,19 +1,16 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import HeroSection from "../../components/HeroSection";
-import { Suspense } from "react";
+import Head from "next/head";
 import Link from "next/link";
-import Comments from "../../components/comments";
-import Status from "../../components/status";
+import { Suspense } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home({services}) {
+const index = ({ services }) => {
   return (
-    <main>
-      <HeroSection />
-      {/* service section */}
-      <section className="">
+    <div>
+      <Head>
+        <title> Service || carpet cleaning service </title>
+      </Head>
+      <div className="text-center my-16 font-bold">
+      <h2 className="text-3xl">Our Services</h2>
+      </div>
       <Suspense fallback={<div> Loading...... </div>}>
         {services.map((service) => (
           <div key={service.id} className="card bg-base-100 shadow-xl my-10 mx-10">
@@ -29,16 +26,13 @@ export default function Home({services}) {
           </div>
         ))}
       </Suspense>
-      <Status/>
-      <Comments/>
-      </section>
-    </main>
+    </div>
   );
-}
+};
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    "https://jsonplaceholder.typicode.com/posts/?_limit=3"
+    "https://jsonplaceholder.typicode.com/posts/?_limit=100"
   );
   const data = await res.json();
   return {
@@ -47,3 +41,4 @@ export const getStaticProps = async () => {
     },
   };
 };
+export default index;
