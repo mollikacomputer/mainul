@@ -5,7 +5,6 @@ const index = () => {
   return (
     <div>
       <Head>
-        {" "}
         <title> About || local cleaning service </title>{" "}
       </Head>
       <div className="hero min-h-screen bg-base-200">

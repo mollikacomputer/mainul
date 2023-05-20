@@ -6,7 +6,7 @@ const Status = () => {
   return (
     <section className="container mx-auto ">
       <div className="text-center" >
-      <h2 className="text-3xl my-16 text-bold ">Company Status</h2>
+      <h2 className="text-3xl my-16 font-bold ">Company Status</h2>
       </div>
       <div className="hero bg-white bg-base-100 rounded-2xl">
         <div className="hero-content flex-col lg:flex-row">
